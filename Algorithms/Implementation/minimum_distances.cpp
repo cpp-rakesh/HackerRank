@@ -8,25 +8,17 @@
 #include <vector>
 #include <cmath>
 
-void calculate_distance(const std::vector<int>& A, const int& start, const int& end, int& distance) {
-	for (int i = start; i < end; ++i) {
-		for (int j = start + 1; j <= end; ++j) {
-			if (i != j && A[i] == A[j]) {
-				if (std::abs(i - j) < distance) {
-					distance = std::abs(i - j);
-				}
-			}
+int minimum_distance(const std::vector<int>& A) {
+	int distance = A.size() + 1;
+	for (std::size_t i = 0; i < A.size() - 1; ++i) {
+		for (std::size_t j = i + 1; j < A.size(); ++j) {
+			if (A[i] == A[j])
+				if (j - i < distance)
+					distance = j - i;
 		}
 	}
-}
 
-void min_distance(const std::vector<int>& A, const int& start, const int& end, int& distance) {
-	if (start < end) {
-		const int mid = (start + end) / 2;
-		min_distance(A, start, mid, distance);
-		min_distance(A, mid + 1, end, distance);		
-		calculate_distance(A, start, end, distance);
-	}
+	return distance;
 }
 
 int main() {
@@ -40,8 +32,7 @@ int main() {
 		A.push_back(value);
 	}
 
-	int distance = A.size() + 1;
-	min_distance(A, 0, A.size() - 1, distance);
+	const int distance = minimum_distance(A);
 
 	if (distance == A.size() + 1)
 		printf("-1\n");
