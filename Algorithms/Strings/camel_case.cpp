@@ -15,14 +15,12 @@ int main() {
     int counter = 1;
     int j = line.size() - 1;
     for (std::size_t i = 0; i <= j; ++i, --j) {
-        if (i == j) {
-            if (line[i] >= 'A' && line[i] <= 'Z')
-                ++counter;
-            break;
-        }
-
         if (line[i] >= 'A' && line[i] <= 'Z')
             ++counter;
+        
+        if (i == j)
+            break;
+        
         if (line[j] >= 'A' && line[j] <= 'Z')
             ++counter;
     }
