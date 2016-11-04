@@ -14,23 +14,17 @@ int main() {
     int n = 0;
     scanf("%d", &n);
 
-    while (n--) {
+    int max_elements = 0;
+    for (int i = 0; i < n; ++i) {
         int value = 0;
         scanf("%d", &value);
-
+        
         ++array[value - 1];
+        if (array[value - 1] > max_elements)
+            max_elements = array[value - 1];
     }
 
-    int total_elements = 0;
-    int max_elements = 0;
-
-    for (int i = 0; i < max; ++i) {
-        total_elements += array[i];
-        if (array[i] > max_elements)
-            max_elements = array[i];
-    }
-
-    printf("%d\n", total_elements - max_elements);
+    printf("%d\n", n - max_elements);
 
     return 0;
 }
