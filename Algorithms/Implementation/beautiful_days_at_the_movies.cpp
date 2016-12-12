@@ -9,8 +9,7 @@
 
 typedef long long int ul;
 
-ul difference(ul x) {
-    const ul t = x;
+ul reverse(ul x) {
     ul reverse = 0;
     int i = 0;
 
@@ -19,7 +18,7 @@ ul difference(ul x) {
         x /= 10;
     }
 
-    return std::abs(t - reverse);
+    return reverse;
 }
 
 int main() {
@@ -30,9 +29,11 @@ int main() {
 
     scanf("%lld %lld %lld", &i, &j, &k);
 
-    for (ul p = i; p <= j; ++p)
-        if (difference(p) % k == 0)
+    for (ul p = i; p <= j; ++p) {
+        const ul diff = std::abs(p - reverse(p));
+        if (static_cast<ul>(std::abs(p - reverse(p))) % k == 0)
             ++count;
+    }
     
     printf("%d\n", count);
 }
