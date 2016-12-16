@@ -1,3 +1,8 @@
+/*
+  The solution for The Love letter mystery from Hacker Rank
+  Author: Rakesh Kumar @ cpp.rakesh@gmail.com
+  Date: Dec 16th, 2016
+ */
 #include <iostream>
 #include <string>
 
