@@ -2,7 +2,7 @@
   Solution for Maxmium Parameter Triangle problem
   Author : Rakesh Kumar, cpp.rakesh@gmail.com
   Date: October 5th, 2016
- */
+*/
 
 #include <cstdio>
 #include <vector>

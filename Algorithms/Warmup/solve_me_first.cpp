@@ -1,11 +1,11 @@
 #include <cstdio>
 
 int main() {
-	int A = 0;
-	int B = 0;
-	scanf("%d", &A);
-	scanf("%d", &B);
+    int A = 0;
+    int B = 0;
+    scanf("%d", &A);
+    scanf("%d", &B);
 
-	printf("%d\n", A + B);
-	return 0;
+    printf("%d\n", A + B);
+    return 0;
 }
