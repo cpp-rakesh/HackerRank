@@ -34,6 +34,6 @@ int main() {
         if (static_cast<ul>(std::abs(p - reverse(p))) % k == 0)
             ++count;
     }
-    
+
     printf("%d\n", count);
 }
