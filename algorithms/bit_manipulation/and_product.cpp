@@ -3,7 +3,7 @@
 int main() {
 	int T = 0;
 	scanf("%d", &T);
-	
+
 	while (T--) {
 		unsigned long long int A = 0;
 		unsigned long long int B = 0;
@@ -20,6 +20,6 @@ int main() {
 
 		printf("%llu\n", result);
 	}
-	
+
 	return 0;
 }

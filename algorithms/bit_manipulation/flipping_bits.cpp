@@ -13,6 +13,6 @@ int main() {
 
 		printf("%u\n", N);
 	}
-	
+
 	return 0;
 }
